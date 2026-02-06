@@ -1,6 +1,6 @@
 const form = document.getElementById("kpiForm");
 const statusEl = document.getElementById("status");
-const API_URL = "https://unstack-cedric-nonspherically.ngrok-free.dev/backend/api/form_kpi_kinh_doanh";
+const API_URL = " https://hypoeutectoid-sheilah-unchipping.ngrok-free.dev/backend/api/form_kpi_kinh_doanh";
 
 
 /* Submit form */

@@ -34,7 +34,7 @@ fileInput.addEventListener('change', () => {
 
 async function fetchSales() {
   // Giả lập API – sau này đổi URL thật
-  const res = await fetch('https://unstack-cedric-nonspherically.ngrok-free.dev/backend/api/sales');
+  const res = await fetch('https://hypoeutectoid-sheilah-unchipping.ngrok-free.dev/backend/api/sales');
   if (!res.ok) throw new Error('Không lấy được danh sách sale');
   return res.json();
 }
@@ -83,7 +83,7 @@ form.addEventListener('submit', async (e) => {
   try {
     const formData = new FormData(form);
     // unstack-cedric-nonspherically.ngrok-free.dev/backend
-    const res = await fetch('https://unstack-cedric-nonspherically.ngrok-free.dev/backend/api/customers', {
+    const res = await fetch('https://hypoeutectoid-sheilah-unchipping.ngrok-free.dev/backend/api/customers', {
       method: 'POST',
       body: formData
     });

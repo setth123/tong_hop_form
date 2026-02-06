@@ -4,7 +4,7 @@ const statusEl = document.getElementById("status");
 const tinhTrangEl = document.getElementById("tinh_trang");
 const ngayHoanThanhEl = document.getElementById("ngay_hoan_thanh");
 
-const API_URL = "https://unstack-cedric-nonspherically.ngrok-free.dev/backend/api/form_don_mua_tam_op";
+const API_URL = " https://hypoeutectoid-sheilah-unchipping.ngrok-free.dev/backend/api/form_don_mua_tam_op";
 
 /* 1. Bật/tắt ngày hoàn thành */
 tinhTrangEl.addEventListener("change", () => {

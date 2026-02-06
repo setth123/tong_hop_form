@@ -3,7 +3,7 @@ const statusEl = document.getElementById("status");
 
 // 🔥 GIỐNG HỆT KHEN: URL TUYỆT ĐỐI
 const API_URL =
-  "https://unstack-cedric-nonspherically.ngrok-free.dev/backend/api/form_ty_le_convert";
+  "https://hypoeutectoid-sheilah-unchipping.ngrok-free.dev/backend/api/form_ty_le_convert";
 
 
 form.addEventListener("submit", async (e) => {
