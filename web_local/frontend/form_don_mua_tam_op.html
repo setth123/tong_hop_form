@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Đơn mua tấm ốp</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <header class="card__header">
+        <h1>Thông tin đơn mua tấm ốp</h1>
+        <p>Dữ liệu dùng để tính hoa hồng cho kế toán. Vui lòng nhập đầy đủ thông tin.</p>
+      </header>
+
+      <form id="employeeForm" class="form">
+        <div class="grid">
+
+          <!-- Mã số nhân viên -->
+          <div class="field">
+            <label for="ma_so_nv">
+              <span class="req">*</span> Mã số nhân viên
+            </label>
+            <input
+              id="ma_so_nv"
+              name="ma_so_nv"
+              type="number"
+              min="1"
+              step="1"
+              placeholder="Nhập mã số nhân viên"
+              required
+            />
+          </div>
+
+          <!-- Họ và tên -->
+          <div class="field">
+            <label for="ho_va_ten">
+              <span class="req">*</span> Họ và tên
+            </label>
+            <input
+              id="ho_va_ten"
+              name="ho_va_ten"
+              type="text"
+              placeholder="Nhập họ và tên"
+              required
+            />
+          </div>
+
+          <!-- Số đơn đã mua -->
+          <div class="field">
+            <label for="so_don_da_mua">
+              <span class="req">*</span> Số đơn đã mua
+            </label>
+            <input
+              id="so_don_da_mua"
+              name="so_don_da_mua"
+              type="number"
+              min="0"
+              step="1"
+              placeholder="Nhập số đơn"
+              required
+            />
+          </div>
+
+          <!-- Tình trạng -->
+          <div class="field">
+            <label for="tinh_trang">
+              <span class="req">*</span> Tình trạng
+            </label>
+            <select id="tinh_trang" name="tinh_trang" required>
+              <option value="">-- Chọn tình trạng --</option>
+              <option value="hoat_dong">Hoạt động</option>
+              <option value="tam_ngung">Tạm ngưng</option>
+              <option value="hoan_thanh">Hoàn thành</option>
+            </select>
+          </div>
+
+          <!-- Ngày hoàn thành -->
+          <div class="field">
+            <label for="ngay_hoan_thanh">
+              Ngày hoàn thành
+            </label>
+            <input
+              id="ngay_hoan_thanh"
+              name="ngay_hoan_thanh"
+              type="date"
+              disabled
+            />
+          </div>
+
+        </div>
+
+        <div class="actions">
+          <button class="btn btn--primary" type="submit">Lưu</button>
+          <button class="btn btn--secondary" type="reset">Nhập lại</button>
+        </div>
+
+        <!-- <div class="status" id="status" aria-live="polite"></div> -->
+         <div class="status status--hidden" id="status" aria-live="polite"></div>
+      </form>
+    </section>
+  </main>
+
+  <script src="./script_don_mua_tam_op.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tỷ lệ convert</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <header class="card__header">
+        <h1>Tỷ lệ convert</h1>
+        <p>Vui lòng nhập đầy đủ thông tin bên dưới.</p>
+      </header>
+
+      <form id="convertForm" class="form">
+        <div class="grid">
+
+          <div class="field">
+            <label>
+              <span class="req">*</span> Họ và tên
+            </label>
+            <input id="ho_va_ten" type="text" required />
+          </div>
+
+          <div class="field">
+            <label>Team</label>
+            <input id="team" type="text" />
+          </div>
+
+          <div class="field">
+            <label>Kết quả kinh doanh</label>
+            <input id="ket_qua_kinh_doanh" type="number" />
+          </div>
+
+          <div class="field">
+            <label>KQ kinh doanh SP chính</label>
+            <input id="kq_sp_chinh" type="number" />
+          </div>
+
+          <div class="field">
+            <label>Tỷ lệ SP chính (%)</label>
+            <input id="ty_le_sp_chinh" type="number" step="0.01" />
+          </div>
+
+          <div class="field">
+            <label>Tỷ lệ tổng (%)</label>
+            <input id="ty_le_tong" type="number" step="0.01" />
+          </div>
+
+          <div class="field">
+            <label>KPI tháng</label>
+            <input id="kpi_thang" type="number" />
+          </div>
+
+          <div class="field">
+            <label>Convert rate (%)</label>
+            <input id="convert_rate" type="number" step="0.01" />
+          </div>
+
+        </div>
+
+        <div class="actions">
+          <button class="btn btn--primary" type="submit">Gửi</button>
+          <button class="btn btn--secondary" type="reset">Nhập lại</button>
+        </div>
+
+        <div class="status" id="status" aria-live="polite"></div>
+      </form>
+    </section>
+  </main>
+
+  <script src="./script_ty_le_convert.js"></script>
+</body>
+</html>

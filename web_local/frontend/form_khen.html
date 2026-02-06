@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Khen</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <header class="card__header">
+        <h1>Khen</h1>
+        <p>Vui lòng chọn đầy đủ thông tin bên dưới.</p>
+      </header>
+
+      <form id="orderForm" class="form">
+        <div class="grid">
+          <!-- Họ và tên -->
+          <div class="field">
+            <label for="full_name">
+              <span class="req">*</span> Họ và tên
+            </label>
+            <input
+              id="full_name"
+              name="full_name"
+              type="text"
+              placeholder="Nhập họ và tên"
+              required
+            />
+          </div>
+
+          <!-- Ngày (thẻ tiêu chuẩn) -->
+          <div class="field">
+            <label for="order_date">
+              <span class="req">*</span> Ngày
+            </label>
+            <input
+              id="order_date"
+              name="order_date"
+              type="date"
+              required
+            />
+          </div>
+
+          <!-- Số đơn -->
+          <div class="field">
+            <label for="order_count">
+              <span class="req">*</span> Số đơn
+            </label>
+            <input
+              id="order_count"
+              name="order_count"
+              type="number"
+              min="0"
+              placeholder="Nhập số đơn"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn--primary" type="submit">Gửi</button>
+          <button class="btn btn--secondary" type="reset">Nhập lại</button>
+        </div>
+
+        <div class="status" id="status" aria-live="polite"></div>
+      </form>
+    </section>
+  </main>
+  <script src="./script_khen.js"></script>
+</body>
+</html>

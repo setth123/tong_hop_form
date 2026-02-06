@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KPI kinh doanh</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <header class="card__header">
+        <h1>KPI kinh doanh</h1>
+        <p>Nhập chỉ tiêu và kết quả KPI trong tháng.</p>
+      </header>
+
+      <form id="kpiForm" class="form">
+        <div class="grid">
+
+          <div class="field">
+            <label><span class="req">*</span> Họ và tên</label>
+            <input name="ho_va_ten" type="text" required />
+          </div>
+
+          <div class="field">
+            <label><span class="req">*</span> Phòng ban</label>
+            <input name="phong_ban" type="text" required />
+          </div>
+
+          <div class="field">
+            <label><span class="req">*</span> KPI tháng (số đơn cần đạt)</label>
+            <input
+              name="kpi_thang"
+              type="number"
+              min="0"
+              step="1"
+              placeholder="Ví dụ: 200"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label><span class="req">*</span> Đã đạt</label>
+            <input
+              name="da_dat"
+              type="number"
+              min="0"
+              step="1"
+              placeholder="Ví dụ: 150"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label>Ngày hoàn thành KPI</label>
+            <input name="ngay_hoan_thanh" type="date" />
+          </div>
+
+        </div>
+
+        <div class="actions">
+          <button class="btn btn--primary" type="submit">Lưu</button>
+          <button class="btn btn--secondary" type="reset">Nhập lại</button>
+        </div>
+
+        <div class="status status--hidden" id="status"></div>
+      </form>
+    </section>
+  </main>
+
+  <script src="./script_kpi_kinh_doanh.js"></script>
+</body>
+</html>

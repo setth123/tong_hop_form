@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Form Nhập thông tin Khách hàng</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <header class="card__header">
+        <h1>Form Nhập thông tin Khách hàng</h1>
+        <p>Vui lòng nhập đầy đủ thông tin để lưu vào hệ thống.</p>
+      </header>
+
+      <form id="customerForm" class="form" enctype="multipart/form-data">
+        <div class="grid">
+          <div class="field">
+            <label for="name">
+              <span class="req">*</span> Tên khách hàng
+            </label>
+            <input id="name" name="name" type="text" placeholder="Nhập ở đây" required />
+          </div>
+
+          <div class="field">
+            <label for="phone">
+              <span class="req">*</span> Số điện thoại
+            </label>
+            <input id="phone" name="phone" type="tel" inputmode="numeric"
+                   placeholder="Nhập ở đây" required />
+            <small class="hint">Ví dụ: 0901234567</small>
+          </div>
+
+          <div class="field">
+            <label for="product_interest">
+              <span class="req">*</span> Sản phẩm dịch vụ quan tâm
+            </label>
+            <select id="product_interest" name="product_interest" required>
+              <option value="" selected disabled>Vui lòng lựa chọn</option>
+
+              <option value="SPC">SPC</option>
+              <option value="Cửa">Cửa</option>
+              <option value="Tấm ốp">Tấm ốp</option>
+              <option value="Nội thất">Nội thất</option>
+
+              <option value="Cầu thang">Cầu thang</option>
+              <option value="Tôn">Tôn</option>
+              <option value="Phào">Phào</option>
+              <option value="Thảo">Thảo</option>
+
+              <option value="Gạch">Gạch</option>
+              <option value="Keo">Keo</option>  
+              <option value="Gỗ tự nhiên">Gỗ tự nhiên</option>
+
+              <option value="Khóa tay cầm">Khóa tay cầm</option>
+              <option value="FB Mới">FB Mới</option>
+              <option value="Nhà dân">Nhà dân</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="customer_source">
+              <span class="req">*</span> Nguồn khách hàng
+            </label>
+            <select id="customer_source" name="customer_source" required>
+              <option value="" selected disabled>Vui lòng lựa chọn</option>
+
+              <option value="FB Mới">FB Mới</option>
+              <option value="Hotline">Hotline</option>
+              <option value="Tiktok">Tiktok</option>
+              <option value="FB miền Nam">FB miền Nam</option>
+
+              <option value="Khách cũ">Khách cũ</option>
+              <option value="Ngoài">Ngoài</option>
+              <option value="Shopee">Shopee</option>
+
+              <option value="Shopee Phào">Shopee Phào</option>
+              <option value="Đào Contact">Đào Contact</option>
+              <option value="Founder">Founder</option>
+
+              <option value="Zalo OA">Zalo OA</option>
+              <option value="KOL">KOL</option>
+            </select>
+          </div>
+
+          <!-- Field chọn sale (ẩn mặc định) -->
+          <div class="field field--full" id="saleField" style="display:none;">
+            <label for="sale_id">
+              <span class="req">*</span> Chọn Sale phụ trách
+            </label>
+            <select id="sale_id" name="sale_id">
+              <option   value="" selected disabled>Đang tải danh sách sale...</option>
+            </select>
+          </div>
+
+
+          <div class="field field--full">
+            <label for="note">Ghi chú</label>
+            <textarea id="note" name="note" rows="3" placeholder="Nhập ở đây"></textarea>
+          </div>
+
+          <div class="field field--full">
+            <label>QR Zalo</label>
+
+            <div class="dropzone" id="dropzone">
+              <input class="dropzone__input" id="qr_zalo" name="qr_zalo" type="file" accept="image/*" />
+              <div class="dropzone__content">
+                <img id="previewImage" class="preview-image" style="display:none;" />
+                
+                <div class="dropzone__title">Dán hoặc kéo tệp tin vào đây</div>
+                <div class="dropzone__sub">hoặc</div>
+                <button type="button" class="btn btn--ghost" id="pickFileBtn">
+                  Tải lên tệp tin cục bộ
+                </button>
+                <div class="dropzone__filename" id="fileName">Chưa chọn tệp</div>
+              </div>
+
+            </div>
+
+            <small class="hint">Chấp nhận ảnh (PNG/JPG). Nếu không có QR thì có thể bỏ qua.</small>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn--primary" type="submit">Gửi</button>
+          <button class="btn btn--secondary" type="reset">Nhập lại</button>
+        </div>
+
+        <div class="status" id="status" aria-live="polite"></div>
+      </form>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
