@@ -3,7 +3,7 @@
   const statusEl = document.getElementById("status");
   const resetBtn = document.getElementById("resetBtn");
 
-  const API_URL = "https://unstack-cedric-nonspherically.ngrok-free.dev/backend/api/form_khen"; // 🔥 đổi thành API của bạn
+  const API_URL = "https://unstack-cedric-nonspherically.ngrok-free.dev/backend/api/form_khen";
 
   // 1. Gửi dữ liệu
   form.addEventListener("submit", async (e) => {
